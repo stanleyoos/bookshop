@@ -6,10 +6,11 @@ import {
 } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { AuthorsModule } from './authors/authors.module';
 import * as cors from 'cors';
 
 @Module({
-  imports: [],
+  imports: [AuthorsModule],
   controllers: [AppController],
   providers: [AppService],
 })
